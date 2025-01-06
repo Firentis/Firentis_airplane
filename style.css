@@ -1,0 +1,567 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    box-sizing: border-box;
+}
+body{
+    height: 1570px;
+    width: 1310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF, #1C1C7A);
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 7%;
+}
+header nav{
+    width: 30%;
+}
+header ul{
+    width: 100%;
+    list-style-type: none;
+    margin-left:30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+header a{
+    color: black;
+    text-decoration: none;
+    transition: 350ms;
+}
+header a:hover{
+    color: gray;
+}
+.catalogo{
+    text-shadow:0px 0px 4px grey;
+}
+header div{
+    width: 30%;
+}
+header div form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header div form input{
+    width:200px;
+}
+header form input{
+    height: 10px;
+    width: 100%;
+    padding: 15px;
+    border:solid 1px gray ;
+    border-radius: 5px;
+}
+header form input:focus{
+    outline: none;
+}
+header form button{
+padding: 5px;
+border: none;
+background-color: #f1f1f1f1;
+box-shadow: 0px 0px 1px black;
+cursor: pointer;
+}
+
+header div form img{
+    position: absolute;
+    left:178px;
+    width: 15px;
+    border: none;
+}
+
+
+main{
+    margin-top: 30px;
+    width: 100%;
+    height: 88%;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: repeat(4, 1fr) 2fr;
+    grid-template-areas: 
+    "section1 section3  "
+    "section2  section4"
+    "section5  section6"
+    "section7 section8"
+    "contactos contactos"
+    ;
+}
+main article{
+    opacity: 0;
+}
+main section:not(:last-child){
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.section_1{
+    grid-area: section1;
+    display: flex;
+    position: relative;
+}
+.imagen_1{
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+ background-image: url(./src/img.jpeg);
+ background-position: center;
+ background-size: cover;
+ z-index:1;
+ transition: 350ms;
+}
+
+.section_1 article {
+    position:absolute ;
+    background-color: rgba(8, 14, 68, 0.863);
+    height:100%;
+    width: 65%;
+    border-radius: 20px;
+    text-align: justify;
+    padding: 26px 26px 26px 40px;
+    color: white;
+    transition: 1s;
+}
+
+article h1{
+ justify-self: center;
+    margin: 10px 0px 20px 0px;
+}
+
+
+.section_2{
+    grid-area: section2;
+    display: flex;
+    position: relative;
+    left: 290px;
+
+}
+.imagen_2{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+ background-image: url(./src/Amsterdam.jpeg);
+ background-position: center;
+ background-size: cover;
+ z-index: 1;
+ transition: 350ms;
+}
+
+.section_2 article {
+    border-radius:  20px;
+    padding: 0px 20px;
+    position: absolute;
+    background-color: #ff5900bf;
+    height: 100%;
+    width: 50%;
+    transition: 1s;
+}
+.section_3{
+    position: relative;
+    grid-area: section3;
+    display: flex;
+}
+.imagen_3{
+    position: absolute;
+    width: 73%;
+    height: 100%;
+    left: 150px;
+    border-radius: 20px;
+ background-image: url(./src/Brazil.jpeg);
+ background-position: center;
+ background-size: cover;
+    z-index: 1;
+    transition: 350ms;
+}
+.section_3 article{
+    position: absolute;
+    width: 60%;
+    border-radius:20px 0px 0px 20px ;
+    left: 150px;
+    height: 100%;
+    z-index: 0;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.833);
+    color: white;
+    padding:20px ;
+}
+.section_4{
+    grid-area: section4;
+    display: flex;
+    position: relative;
+}
+.imagen_4{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+ background-image: url(./src/Inglaterra.jpeg);
+ background-position: center;
+ background-size: cover;
+ z-index: 1;
+ transition: 350ms;
+}
+.section_4 article{
+    background-color: #c8c6c6f1;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    transition: 1s;
+    padding: 10px 0px 0px 40px ;
+}
+.section_5{
+    grid-area: section5;
+    display: flex;
+    position: relative;
+}
+.imagen_5{
+    width: 60%;
+    height: 100%;
+    border-radius: 20px;
+ background-image: url(./src/Italia.jpeg);
+ background-position: center;
+ background-size: cover;
+    z-index: 1;
+    transition: 350ms;
+}
+.section_5 article{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    padding-left: 67px;
+    transition: 1s;
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+.section_6{
+    grid-area: section6;
+    display: flex;
+    position: relative;
+}
+.imagen_6{
+    position: absolute;
+    left: 260px;
+    width: 55%;
+    height: 100%;
+    border-radius: 20px;
+ background-image: url(./src/Roma.jpg);
+ background-position: center;
+ background-size: cover;
+ z-index: 1;
+ transition: 350ms;
+}
+.section_6 article{
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    left: 260px;
+    transition: 1s;
+    background-color: rgba(139, 148, 212, 0.937);
+    border-radius: 20px;
+}
+.section_7{
+    grid-area: section7;
+    display: flex;
+    position: relative;
+    left: 290px;
+}
+.imagen_7{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+ background-image: url(./src/India.jpeg);
+ background-position: center;
+ background-size: cover;
+    z-index: 1;
+    transition: 350ms;
+}
+.section_7 article{
+    background-color: #c8c6c6f1;
+    border-radius: 20px;
+    padding: 10px;
+    position:absolute;
+    width: 50%;
+    height: 100%;
+    transition: 1s;
+}
+.section_8{
+    grid-area: section8;
+    display: flex;
+    position: relative;
+}
+.imagen_8{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+ background-image: url(./src/TorreEifel.jpeg);
+ background-position: center;
+ background-size: cover;
+ z-index: 1;
+ transition: 350ms;
+}
+.section_8 article{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px 10px 10px 40px;
+    transition: 1s;
+    background-color: rgb(83, 48, 48);
+}
+.contactos{
+    grid-area:contactos ;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    box-shadow: -20px 0px 5px #1C1C7A;
+    background-color: #f87241;
+    
+}
+
+
+.contactos form{
+    position: absolute;
+    z-index: 2;
+    left: 30px;
+    color: white;
+    height: 90%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #1C1C7A;
+    border-radius: 30px;
+    transition: 1s;
+}
+.contactos form input{
+    height: 50px;
+    padding: 10px;
+    border-radius: 3px;
+    border: solid 1px gray;
+}
+input:focus{
+    outline: none;
+}
+.contactos form textarea{
+    height: 20%;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid 1px gray ;
+}
+textarea:focus{
+outline: none;
+}
+
+.contactos form h2{
+    font-size: 40px;
+    align-self: center;
+    
+}
+.contactos form div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactos form div input{
+width: 50%;
+}
+
+.contactos form button{
+    width: 100px;
+    height:40px;
+    align-self: center;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contactos form p{
+    position: absolute  ;
+    top: 20px;
+    right: 30px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: 250ms;
+}
+.contactos form p:hover{
+    color: red;
+}
+.img_form{
+    position: absolute;
+    z-index: 3;
+    left: 30px;
+    border-radius: 30px;
+    width: 45%;
+    height: 90%;
+    background-image: url(./src/VolandoContact.jpeg);
+    background-size: cover;
+    box-shadow:5px 6px 10px #1C1C7A;
+    transition: 1s;
+}
+.img_form:hover{
+    transform: scale(1.05);
+}
+.informacion{
+    position: relative;
+    left: 350px;
+    z-index: 1;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    font-size: larger;
+    text-align:justify;
+    justify-content: center;
+    transition: 350ms;
+}
+.informacion button{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    align-self: center;
+    transition: 1s;
+    z-index: 2;
+    cursor: pointer;
+}
+.informacion button:hover{
+    transform: scale(1.2);
+}
+
+
+footer{
+background-color: rgb(0, 0, 0);
+text-align: center;
+align-content: center;
+color: white;
+    width: 100%;
+    height: 5%;
+}
+footer a{
+    text-decoration: none;
+    color: blueviolet;
+    transition: 1s;
+}
+footer a:hover{
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+
+
+
+.mostrar_right1{
+    transform: translateX(360px);
+    opacity: 0.9;
+
+}
+.encoger_right1{
+    width: 60%;
+    border-radius: 30px 0px 0px 30px;
+}
+.mostrar_left2{
+    transform: translateX(-290px);  
+    opacity: 0.9;
+}
+.encoger_left2{
+    width: 45%;
+    left:230px;
+    border-radius: 0px 30px 30px 0px;
+}
+.mostrar_left3{
+    transform: translateX(-300px);
+    opacity: 0.9;
+}
+.encoger_left3{
+    width: 60%;
+    left:220px;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.mostrar_right4{
+    transform: translateX(297px);
+    opacity: 0.9;
+
+
+}
+.encoger_right4{
+    width: 51%;
+    border-radius: 30px 0px 0px 30px;
+}
+.mostrar_right5{
+    transform: translateX(270px);
+    opacity: 0.9;
+}
+.encoger_right5{
+    width: 50%;
+    border-radius: 30px 0px 0px 30px;
+}
+.mostrar_left6{
+    transform: translateX(-290px);  
+    opacity: 0.9;
+    padding-left: 10px;
+}
+.encoger_left6{
+    width: 50%;
+    left: 280px;
+    border-radius: 0px 30px 30px 0px;
+}
+.mostrar_left7{
+    transform: translateX(-300px);  
+    left: 10px;
+    opacity: 0.9;
+    padding-left: 10px;
+}
+.encoger_left7{
+    width: 50%;
+    left: 280px;
+    border-radius: 0px 30px 30px 0px;
+}
+.mostrar_right8{
+    transform: translateX(260px);
+    opacity: 0.9;
+
+
+}
+.encoger_right8{
+    width: 46%;
+    border-radius: 30px 0px 0px 30px;
+}
+
+
+.ocultar_informacion{
+    opacity: 0;
+transform: translateX(-700px);
+}
+.mostrar_formulario{
+transform: translateX(650px);
+}
+.mostrar_informacion{
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes move {
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+
+}
